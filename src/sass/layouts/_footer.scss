@@ -1,0 +1,91 @@
+.footer {
+  background-color: var(--color-gray-dark);
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    align-self: center;
+    margin-bottom: 4rem;
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--color-gray-light);
+
+    @include respond(tab-land) {
+      justify-content: space-between;
+      padding: 0 12rem 4rem 8rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 0 8rem 4rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 0 2rem;
+      flex-direction: column;
+      align-content: center;
+    }
+
+    &__author {
+      text-align: center;
+
+      @include respond(phone) {
+        padding-bottom: 2rem;
+
+        & h4 {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      &__links {
+        display: flex;
+        justify-content: space-around;
+
+        @include respond(phone) {
+          width: 40%;
+          margin: 0 auto;
+        }
+
+        & a {
+          & svg {
+            height: 3rem;
+            width: 3rem;
+            margin-top: 1.5rem;
+            fill: var(--color-primary);
+          }
+        }
+      }
+    }
+
+    &__site {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include respond(phone) {
+        & h4 {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      & a {
+        & svg {
+          height: 3rem;
+          width: 3rem;
+          margin-top: 1.5rem;
+          fill: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    color: var(--color-text-light);
+    margin: 2rem auto 0;
+  }
+}
